@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studentenhuis Orchidee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ticker-tape">
+        <div class="ticker-content" id="sineRegno"></div>
+    </div>
+
+    <header>
+        <h1 style="cursor: pointer">🌺 ORCHIDEE 🌺</h1>
+        <nav class="tabs">
+            <button class="tab-button active" data-page="home">Home</button>
+            <button class="tab-button" data-page="huisgenoten">Huisgenoten</button>
+            <button class="tab-button" data-page="bakkenspel">Bakkenspel</button>
+            <button class="tab-button" data-page="geschiedenis">Geschiedenis</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home page -->
+        <div class="page active" id="home">
+            <div class="top-row">
+                <section class="recipe-section">
+                    <h2>Recept van de Dag</h2>
+                    <div class="recipe-container">
+                        <h3 id="recipe-title" class="clickable"></h3>
+                        <div id="recipe-content">
+                            <p id="recipe-instructions"></p>
+                            <h4>Ingrediënten:</h4>
+                            <ul id="ingredients-list"></ul>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="fustietaken-container">
+                    <h2 class="fustietaken-header">Fustietaken</h2>
+                    <ul class="fustietaken-lijst"></ul>
+                </div>
+            </div>
+
+            <div class="wisdom-container">
+                <div class="tegeltjeswijsheid-container">
+                    <h2 class="tegeltjeswijsheid-header">Nesotrische Navelstaarderij</h2>
+                    <div class="tegeltjeswijsheid-content" id="tegeltjeswijsheid"></div>
+                </div>
+
+                <div class="rijmtip-container">
+                    <h2 class="rijmtip-header">Rijmtip voor Eline</h2>
+                    <div class="rijmtip-content" id="rijmtip"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Huisgenoten page -->
+        <div class="page" id="huisgenoten">
+            <div class="content-container huisgenoten-container">
+                <h2>Huisgenoten</h2>
+                <div class="huisgenoten-lijst">
+                    <div class="huisgenoot" data-info="heeft tijd over om websites te maken en oh ja ook nog iets van nestor ofzo maar snap niet wat dat betekent • Augustinus">
+                        <span class="huisgenoot-naam">Tinny</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="Nestrix, alhoewel dat vindt ze vooral zelf • Minerva">
+                        <span class="huisgenoot-naam">Kali</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="Trek een bak want naast brabant is drinken je persoonlijkheid • Augustinus">
+                        <span class="huisgenoot-naam">Tiqo</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="Fusietijger • Minerva">
+                        <span class="huisgenoot-naam">Jules</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="bel hem aub voor een datediner • Augustinus">
+                        <span class="huisgenoot-naam">Kuub</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="oppersjaars, veau • Augustinus">
+                        <span class="huisgenoot-naam">Eline</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="Als je haar zoekt ligt op bed met Borps Outerbanks te kijken • Minerva">
+                        <span class="huisgenoot-naam">Bert</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="beweegt raar • Minerva">
+                        <span class="huisgenoot-naam">Ot</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="Loopt alsof hij van achter is gepakt en waarschijnlijk is dat ook zo, sjaars • Augustinus">
+                        <span class="huisgenoot-naam">Sanus</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="Waarschijnlijk onbereikbaar want op Bali of verstrooid, oppersjaars, veau • Minerva">
+                        <span class="huisgenoot-naam">Mo</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="sjaars • Augustinus">
+                        <span class="huisgenoot-naam">Freek</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                    <div class="huisgenoot" data-info="Eet veel voor de act, sjaars • Minerva">
+                        <span class="huisgenoot-naam">Harst</span>
+                        <span class="huisgenoot-bloem">🌺</span>
+                    </div>
+                </div>
+                <div id="huisgenoot-info" class="huisgenoot-popup"></div>
+            </div>
+        </div>
+
+        <!-- Bakkenspel page -->
+        <div class="page" id="bakkenspel">
+            <div class="content-container bakkenspel-container">
+                <h2>Bakkenspel</h2>
+                <div class="bloem-container">
+                    <button class="bloem-button" id="lotingBloem">
+                        🌺
+                    </button>
+                </div>
+                <div id="lotingResultaat" class="loting-resultaat"></div>
+            </div>
+        </div>
+
+        <!-- Geschiedenis page -->
+        <div class="page" id="geschiedenis">
+            <div class="content-container geschiedenis-container">
+                <h2>Geschiedenis</h2>
+                <p class="geschiedenis-tekst">Hé Nerd, waarom wil je dit überhaupt zien, ga lekker archiefcommissie of Commissie ter Waarborging van Augustijns Historie doen treurpijp</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
